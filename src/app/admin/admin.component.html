@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-8 m-auto">
+    <form [formGroup]="formGroupAnuncio">
+      <div class="mb-3">
+        <div class="display-6 text-center">
+          Cadastro de Anuncios
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="titulo" class="form-label">Título:</label>
+        <input type="text" formControlName="titulo" class="form-control" id="titulo" placeholder="Insira seu Titulo">
+      </div>
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição:</label>
+        <input type="text" formControlName="descricao" class="form-control" id="descricao"
+          placeholder="Insira a Descrição">
+          <div *ngIf="submitted && description.invalid">
+            <small class="text-danger">Descrição Inválido!</small>
+          </div>
+      </div>
+      <div class="mb-3">
+        <label for="preco" class="form-label">Preço:</label>
+        <input type="number" formControlName="preco" class="form-control" id="preco" placeholder="Insira o preço">
+        <div *ngIf="submitted && price.invalid">
+          <small class="text-danger">Preço Inválido!</small>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="data" class="form-label">Data de Validade:</label>
+        <input type="date" formControlName="data" class="form-control" id="preco">
+      </div>
+      <div class="mb-3">
+        <label for="imagem" class="form-label">Imagem:</label>
+        <input type="text" formControlName="imagem" class="form-control" id="imagem" placeholder="Coloque a Imagem">
+        <div *ngIf="submitted && image.invalid">
+          <small class="text-danger">Imagem Inválida!</small>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="d-flex flex-nowrap gap-2">
+          <label class="form-check-label">Anúncio Ativo ? :</label>
+          <div class="form-check">
+            <input type="checkbox" formControlName="status" class="form-check-input">
+          </div>
+        </div>
+      </div>
+      <div class="mb-3 d-flex justify-content-end gap-2">
+        <button class="btn btn-success" (click)="save()">Salvar</button>
+        <button class="btn btn-danger" (click)="limpar()">Limpar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Título</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Validade</th>
+      <th scope="col">Imagem</th>
+      <th scope="col">Status</th>
+      <th scope="col">Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dados of anuncio">
+      <th scope="row">{{dados.id}}</th>
+      <td>{{dados.titulo}}</td>
+      <td>{{dados.descricao}}</td>
+      <td>{{dados.preco | currency:'BRL':'symbol':'1.2-2' }}</td>
+      <td class="break">{{dados.data | date:'dd/MM/yyyy' }}</td>
+      <td><img src='{{dados.imagem}}' class="card-img-top" alt='{{dados.titulo}}' style="width: 100px;"></td>
+      <td><strong>{{dados.status  ? 'Ativo' : 'Desativado'}}</strong></td>
+      <td class="d-flex flex-column gap-1">
+        <button class="btn btn-primary" (click)="editar(dados)">Editar</button>
+        <button class="btn btn-danger" (click)="delete(dados)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

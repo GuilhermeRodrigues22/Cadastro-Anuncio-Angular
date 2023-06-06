@@ -1,0 +1,22 @@
+{
+  "anuncios": [
+    {
+      "id": 1,
+      "titulo": "Dodge Charger",
+      "preco": 22000,
+      "descricao": "O Dodge é um carro clássico dos anos 80 e muito estiloso",
+      "data": "2022-01-21",
+      "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/79/1970_Dodge_Charger_RT.jpg",
+      "status": true
+    },
+    {
+      "id": 2,
+      "titulo": "Lamborghini Veneno",
+      "preco": 4450000000,
+      "descricao": "A Veneno é um automóvel de luxo de 2 portas de porte grande.",
+      "data": "2023-05-02",
+      "imagem": "https://uploads.diariodopoder.com.br/2021/07/0400e97d-lamborghini-aventador_lp780-4_ultimae_roadster-2022-1600-01.jpg",
+      "status": true
+    }
+  ]
+}
