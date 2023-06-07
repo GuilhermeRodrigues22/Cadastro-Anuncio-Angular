@@ -8,7 +8,7 @@ import { Anuncio } from 'anuncio';
 })
 export class AnuncioService {
   url = 'http://localhost:3000/anuncios';
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAnuncios(): Observable<Anuncio[]> {
     return this.http.get<Anuncio[]>(this.url);

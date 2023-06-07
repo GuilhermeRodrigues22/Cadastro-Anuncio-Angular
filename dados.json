@@ -3,19 +3,28 @@
     {
       "id": 1,
       "titulo": "Dodge Charger",
-      "preco": 22000,
+      "preco": 220000,
       "descricao": "O Dodge é um carro clássico dos anos 80 e muito estiloso",
-      "data": "2022-01-21",
+      "data": "2023-09-71",
       "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/79/1970_Dodge_Charger_RT.jpg",
       "status": true
     },
     {
       "id": 2,
-      "titulo": "Lamborghini Veneno",
-      "preco": 4450000000,
-      "descricao": "A Veneno é um automóvel de luxo de 2 portas de porte grande.",
-      "data": "2023-05-02",
-      "imagem": "https://uploads.diariodopoder.com.br/2021/07/0400e97d-lamborghini-aventador_lp780-4_ultimae_roadster-2022-1600-01.jpg",
+      "titulo": "Ford Pickup 1950",
+      "preco": 190000,
+      "descricao": "Uma caminhonete clássica americana dos anos 50",
+      "data": "2023-10-12",
+      "imagem": "https://i.pinimg.com/originals/9f/53/86/9f53862b18dc450428cfeef6edf89cc6.jpg",
+      "status": true
+    },
+    {
+      "id": 3,
+      "titulo": "Camaro 1970",
+      "preco": 300000,
+      "descricao": "Camaro clássico e além de ser muito estiloso conta com um motor potente",
+      "data": "2023-07-01",
+      "imagem": "hhttps://storage.googleapis.com/benzin/lead/original/img_633e920882aaf.jpg",
       "status": true
     }
   ]

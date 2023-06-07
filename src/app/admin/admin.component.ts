@@ -1,7 +1,7 @@
 import { TransmissaoService } from './../transmissao.service';
 import { AnuncioService } from './../anuncio.service';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Anuncio } from 'anuncio';
 
 @Component({
@@ -72,24 +72,25 @@ export class AdminComponent {
       next: () => this.loadAnuncio(),
     });
   }
+
   limpar() {
     this.formGroupAnuncio.reset();
     this.submitted = false;
   }
 
-  get title(): any {
+  get titulo(): any {
     return this.formGroupAnuncio.get('titulo');
   }
-  get price(): any {
+  get preco(): any {
     return this.formGroupAnuncio.get('preco');
   }
-  get description(): any {
+  get descricao(): any {
     return this.formGroupAnuncio.get('descricao');
   }
   get data(): any {
     return this.formGroupAnuncio.get('data');
   }
-  get image(): any {
+  get imagem(): any {
     return this.formGroupAnuncio.get('imagem');
   }
 }
